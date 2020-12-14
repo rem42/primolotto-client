@@ -5,7 +5,7 @@ import {Grid} from './utils/grid';
 import * as cheerio from 'cheerio';
 import * as querystring from 'querystring';
 import {CookieExtractor} from './utils/cookie-extractor';
-import {GridInfo} from "./interface/gridInfo";
+import {GridInfo} from './interface/gridInfo';
 
 export class Primolotto {
     private uri = {
@@ -116,7 +116,7 @@ export class Primolotto {
             _token: token,
             email: this.email,
             password: this.password,
-            remember: "on",
+            remember: 'on',
         });
         const axiosConfig = {
             headers: {
