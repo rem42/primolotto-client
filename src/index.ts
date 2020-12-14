@@ -1,0 +1,1 @@
+export {Primolotto} from './primolotto';
