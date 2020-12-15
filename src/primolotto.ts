@@ -1,4 +1,4 @@
-import axios, {AxiosResponse} from 'axios';
+import axios from 'axios';
 import tough = require('tough-cookie');
 import axiosCookieJarSupport from 'axios-cookiejar-support';
 import {Grid} from './utils/grid';
@@ -88,7 +88,7 @@ export class Primolotto {
 
     public async scratch(): Promise<boolean>
     {
-        const canContinue = this.scratchStart();
+        const canContinue = await this.scratchStart();
 
         if(!canContinue) {
             return false;
