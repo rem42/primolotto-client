@@ -18,7 +18,9 @@
     "prepublishOnly": "npm run ci",
     "preversion": "npm run ci",
     "clean:all": "npm run clean:tmp && rimraf node_modules",
-    "clean:tmp": "rimraf dist docs coverage .nyc_output"
+    "clean:tmp": "rimraf dist docs coverage .nyc_output",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "rem42 <me@remy.ovh> (https://remy.ovh)",
   "repository": {
@@ -46,12 +48,14 @@
     "typescript": "^3.6.2"
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.3",
     "axios-cookiejar-support": "^1.0.1",
     "cheerio": "^1.0.0-rc.3",
-    "tough-cookie": "^4.0.0"
+    "tough-cookie": "^4.0.0",
+    "@snyk/protect": "latest"
   },
   "bugs": {
     "url": "https://github.com/rem42/primolotto-client/issues"
-  }
+  },
+  "snyk": true
 }
